@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background: grey;
+    width: 1820px;
+    height: 800px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.raindrop {
+    position: absolute;
+    bottom: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    animation: fall linear infinite;
+    z-index: 5;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+.user {
+    margin: 0;
+    margin-top: -90px;
+}
+
+.text {
+    color: aliceblue;
+    top: 10px;
+    position: absolute;
+}
+
+h2 {
+    color: black;
+    position: absolute;
+    top: 70px;
+}
+
+.pic {
+    position: relative;
+    top: 10px;
+}
+
+.img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.start-button {
+    width: 30px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    top: 40px;
+    transition: transform 0.3s ease; 
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.start-button:hover {
+    animation: bounce 1s forwards; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.25);
+    }
+    60% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.startText {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #1a1a1a;
+    color: red;
+    width: 200px;
+    margin: 0;
+    top: -300px;
+    position: absolute;
+    left: -20px;
+}
